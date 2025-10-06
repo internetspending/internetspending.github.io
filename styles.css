@@ -1,22 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 :root {
-  /* variables */
-  --cg-black: rgb(30, 32, 32);
-  --cg-blue: rgb(36, 94, 255);
-  --cg-grey: rgb(243, 243, 243);
-  --cg-white: rgb(255, 255, 255);
+  /* Earthy Harmony color palette */
+  --sage-light: #CBDED3;
+  --dusty-teal: #8BA49A;
+  --warm-beige: #D2C49E;
+  --forest-dark: #3B6255;
+  --cream-white: #E2DFDA;
 }
 
 html {
   height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--cg-grey);
+  background-color: var(--sage-light);
   position: relative;
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--forest-dark);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* CSS for navigation */
@@ -26,7 +37,6 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 7%;
   z-index: 10;
 
   display: flex;
@@ -34,65 +44,79 @@ body {
   align-items: center;
   text-align: center;
 
-  background-color: var(--cg-black);
-  color: var(--cg-white);
-  padding: 0px 0px;
-
-  /* Debug border */
-  /* border: solid red; */
+  background-color: var(--forest-dark);
+  color: var(--cream-white);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 3.5rem;
 }
 
 .nav-list {
   display: flex;
   flex-direction: row;
-  position: relative;
-  right: 30px;
   list-style: none;
-
-  /* Debug border */
-  /* border: solid blue; */
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .navbar a {
-  color: var(--cg-white);
-  font-weight: bold;
-  margin: 0 12px;
+  color: var(--cream-white);
+  font-weight: 500;
   text-decoration: none;
-  letter-spacing: 2px;
-
-  font-family: monospace;
+  letter-spacing: 0px;
+  transition: color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.5rem;
+  flex-shrink: 0;
 }
 
 .navbar a:hover {
-  color: var(--cg-blue);
-  text-decoration: underline;
+  color: var(--dusty-teal);
+  text-decoration: none;
 }
 
 .navbar a:active {
-  color: var(--cg-blue);
+  color: var(--dusty-teal);
 }
 
 .logo a {
-  font-family: Georgia;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .logo a:hover {
-  text-decoration: None;
+  text-decoration: none;
 }
 
 main {
-  padding: 0 20px 40px 20px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
 }
 
 .page-title {
   display: flex;
   justify-content: center;
-  font-size: 40px;
-  font-family: Georgia;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: var(--forest-dark);
+  margin-bottom: 2rem;
 }
 
 /* CSS for portfolio grid */
@@ -127,32 +151,31 @@ main {
 
 .project-details {
   display: flex;
-  background-color: var(--cg-white);
+  background-color: var(--cream-white);
   width: 30%;
   height: 500px;
   flex-shrink: 1;
-  padding: 0 20px;
-  margin: 0px;
-  line-height: 1.5;
-  overflow: scroll;
-
+  padding: 2rem;
+  margin: 0;
+  line-height: 1.6;
+  overflow-y: auto;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-
-  /* Debug border */
-  /* border: 2px solid green; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .project-details a {
-  color: var(--cg-black);
+  color: var(--forest-dark);
   text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
 .project-details a:hover {
-  color: var(--cg-blue);
+  color: var(--dusty-teal);
   text-decoration: underline;
 }
 
@@ -161,8 +184,10 @@ main {
 }
 
 .project-name {
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
 }
 
 /* CSS for home page */
@@ -171,55 +196,70 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  padding: 1.5rem;
+  background-color: var(--cream-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .about-image img {
-  max-width: 300px;
-  border-radius: 3px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .about-text {
   flex: 1;
-  margin-left: 20px;
 }
 
 .about-text h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--forest-dark);
+  font-weight: 600;
 }
 
 .about-text p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
 }
 
 /* CSS for resume page */
 
 .button {
-  background-color: var(--cg-black);
+  background-color: var(--forest-dark);
   border: none;
-  color: var(--cg-white);
-
-  font-family: monospace;
-
-  padding: 5px 7px;
+  color: var(--cream-white);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding: 12px 24px;
   text-align: center;
-
-  border-radius: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .button:hover {
-  background-color: var(--cg-blue);
+  background-color: var(--dusty-teal);
 }
 
 .resume h2 {
-  font-family: Georgia;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
 }
 
 /* CSS for contact form */
@@ -227,26 +267,43 @@ main {
 label {
   display: block;
   margin-bottom: 8px;
-  font-family: Georgia;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: var(--forest-dark);
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
   resize: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--forest-dark);
 }
 
 /* Add some spacing to the form */
 form {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
+  background-color: var(--cream-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 /* CSS for footer */
@@ -255,10 +312,106 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--cg-black);
-  color: var(--cg-white);
-  position: absolute;
-  bottom: 0;
+  background-color: var(--forest-dark);
+  color: var(--cream-white);
+  position: relative;
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-list {
+    gap: 1rem;
+  }
+  
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .logo a {
+    font-size: 1.1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .about-image img {
+    width: 250px;
+  }
+  
+  main {
+    padding: 0.75rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .nav-list {
+    gap: 0.75rem;
+  }
+  
+  .navbar a {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+  
+  .logo a {
+    font-size: 1rem;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .about {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+  
+  .about-image img {
+    width: 200px;
+  }
+  
+  .about-text p {
+    font-size: 0.9rem;
+  }
+  
+  main {
+    padding: 0.5rem;
+  }
+  
+  form {
+    padding: 1rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
