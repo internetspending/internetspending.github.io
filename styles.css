@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+/* Global box-sizing reset */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
 :root {
   /* Earthy Harmony color palette */
   --sage-light: #CBDED3;
@@ -7,6 +12,10 @@
   --warm-beige: #D2C49E;
   --forest-dark: #3B6255;
   --cream-white: #E2DFDA;
+  
+  /* Control header/footer sizing */
+  --nav-h: 56px;          /* match navbar min-height ~3.5rem */
+  --footer-h: 48px;       /* ~3rem; adjust if you change footer */
 }
 
 html {
@@ -48,7 +57,7 @@ body {
   color: var(--cream-white);
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  min-height: 3.5rem;
+  min-height: var(--nav-h);
 }
 
 .nav-list {
@@ -103,10 +112,10 @@ main {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 2rem;
   width: 100%;
-  box-sizing: border-box;
   flex: 1;
+  min-height: calc(100vh - var(--nav-h) - var(--footer-h));
+  padding-bottom: calc(var(--footer-h) + 24px);
 }
 
 .page-title {
@@ -309,18 +318,18 @@ form {
 /* CSS for footer */
 
 .footer {
+  position: relative;
+  width: 100%;
+  height: var(--footer-h);
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--forest-dark);
   color: var(--cream-white);
-  position: relative;
-  width: 100%;
-  height: 3rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
 /* Responsive Design */
