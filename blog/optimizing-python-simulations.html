@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizing Python Simulations with Numba - Jeron Perey</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo"><a href="../index.html">personal website</a></h1>
+        <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article class="blog-post">
+            <div class="blog-post-header">
+                <div class="blog-meta">
+                    <span class="blog-date">January 15, 2025</span>
+                    <span class="blog-category">Technical</span>
+                </div>
+                <h1 class="blog-post-title">Optimizing Python Simulations with Numba</h1>
+                <div class="blog-navigation">
+                    <a href="../blog.html" class="btn btn-outline">← Back to Blog</a>
+                </div>
+            </div>
+            
+            <div class="blog-content">
+                <p>When I began developing my <strong>2-D Ising Model simulation</strong> for a physics research project, performance became the biggest challenge. The simulation required millions of random spin-flip calculations, and pure Python wasn't fast enough to handle that scale.</p>
+
+                <p>That's when I discovered <strong>Numba</strong>, a JIT (Just-In-Time) compiler that translates Python functions into optimized machine code using LLVM. With only a few <code>@njit</code> decorators, runtime for my simulations dropped from <strong>five minutes to under three seconds per temperature point</strong> — over a <strong>100× improvement</strong>.</p>
+
+                <p>I later enabled <code>parallel=True</code> to distribute spin updates across CPU cores. This change was crucial for large lattice sizes and running multiple temperature sweeps simultaneously.</p>
+
+                <p>In the end, I achieved both speed and scalability — enabling more accurate <strong>phase transition analysis</strong> through Binder cumulant crossings.</p>
+
+                <blockquote>
+                    <p>This project wasn't just about coding efficiency — it was about learning how optimization begins with <strong>understanding data flow and computation patterns</strong>, not just using faster tools.</p>
+                </blockquote>
+
+                <h2>Key Takeaways</h2>
+                <ul>
+                    <li><strong>Numba JIT compilation</strong> can provide 100x+ performance improvements for numerical computations</li>
+                    <li><strong>Parallel processing</strong> is essential for large-scale simulations</li>
+                    <li><strong>Understanding algorithms</strong> is more important than just using faster tools</li>
+                    <li><strong>Physics simulations</strong> require both mathematical rigor and computational efficiency</li>
+                </ul>
+
+                <h2>Technical Stack</h2>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Numba</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">Matplotlib</span>
+                    <span class="tech-badge">LLVM</span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">&copy; 2025 My Personal Website | All Rights Reserved</footer>
+</body>
+</html>

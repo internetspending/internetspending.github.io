@@ -691,6 +691,149 @@ form {
   opacity: 0.8;
 }
 
+/* Blog Post Styles */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--cream-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--sage-light);
+}
+
+.blog-post-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+.blog-navigation {
+  margin-top: 1.5rem;
+}
+
+.blog-content {
+  line-height: 1.7;
+  color: var(--forest-dark);
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--forest-dark);
+  margin: 2rem 0 1rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sage-light);
+}
+
+.blog-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dusty-teal);
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.blog-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.blog-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.blog-content code {
+  background: var(--sage-light);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--forest-dark);
+}
+
+.blog-content blockquote {
+  background: var(--sage-light);
+  border-left: 4px solid var(--dusty-teal);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--forest-dark);
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.comparison-item {
+  background: var(--sage-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--dusty-teal);
+}
+
+.comparison-item h3 {
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.comparison-item ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.comparison-item li {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments for blog posts */
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .blog-post-title {
+    font-size: 2rem;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .blog-content {
+    font-size: 1rem;
+  }
+  
+  .blog-content p {
+    font-size: 1rem;
+  }
+}
+
 .project-overlay {
   position: absolute;
   top: 0;
