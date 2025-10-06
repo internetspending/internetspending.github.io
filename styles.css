@@ -466,6 +466,14 @@ form {
   margin-bottom: 1.5rem;
 }
 
+.hero-tagline {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--dusty-teal);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
 .hero-description {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -667,6 +675,20 @@ form {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--sage-light) 0%, var(--dusty-teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-icon {
+  font-size: 4rem;
+  opacity: 0.8;
 }
 
 .project-overlay {
